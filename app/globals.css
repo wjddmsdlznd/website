@@ -1,0 +1,40 @@
+:root {
+  --black: #050607;
+  --black-soft: #0b0d0e;
+  --panel: #111416;
+  --ivory: #ebe7df;
+  --paper: #c9c6bf;
+  --muted: #7f8585;
+  --line: rgba(235, 231, 223, 0.16);
+  --line-strong: rgba(235, 231, 223, 0.34);
+  --accent: #b97a4f;
+  --accent-cool: #7b9898;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --font-sans: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-serif: "Noto Serif KR", "Batang", serif;
+  --font-latin: "Arial Narrow", "Noto Sans KR", sans-serif;
+  color: var(--ivory);
+  background: var(--black);
+  font-family: var(--font-sans);
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--black); }
+body { margin: 0; min-width: 320px; overflow-x: hidden; word-break: keep-all; overflow-wrap: break-word; background: var(--black); }
+body:has(dialog[open]) { overflow: hidden; }
+button, a { color: inherit; font: inherit; }
+button { border: 0; }
+a { text-decoration: none; }
+button, a { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+section[id] { scroll-margin-top: 88px; }
+
+@media (max-width: 1024px) {
+  section[id] { scroll-margin-top: 72px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
